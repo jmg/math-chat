@@ -1,0 +1,24 @@
+<center><div><h1>Welcome to Math Chat</h1></div></center>
+<img src="/images/math.jpg" class="image">
+
+<div class="centered">
+    <p class="column blue">
+        Math-Chat is a chat application wich allows use <a href="http://en.wikipedia.org/wiki/LaTeX">Latex</a> in the converation
+        to write complex mathematical symbols and graphs.
+    </p>
+    <br/>
+    <% form_for @user, :url => '/chat/create_user' do |f| %>
+        <%= f.error_messages %>
+    <p>
+        <%= f.label 'User Name' %><br />
+        <%= f.text_field :name, :class => "login" %>
+        </p>
+        <p>
+        <%= f.submit 'Enter' %>
+    </p>
+    <br/>
+    <p class="column blue">
+        Note: Here's a <a href="http://en.wikibooks.org/wiki/LaTeX/Mathematics" target="_blank">Latex Commands</a> List and Tutorial.
+    </p>
+    <% end %>
+</div>

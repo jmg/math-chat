@@ -1,0 +1,9 @@
+
+CREATE TABLE messages (id_message INTEGER PRIMARY KEY,
+                       id_user NUMERIC,
+                       text TEXT,
+                       FOREIGN KEY(id_user) REFERENCES users(id));
+
+CREATE TABLE users (id_user INTEGER PRIMARY KEY,
+                    name TEXT);
+
